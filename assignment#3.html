@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>assignment#1</title>
+	<script type="text/javascript">
+		function vehicle(wheels,engine_type,seats)
+		{
+			this.vwheels=wheels;
+			this.vengine=engine_type;
+			this.vseats=seats;
+		}
+		var v_car=new vehicle(4,'petrol',4);
+		function car(make,model,year)
+		{
+			this.cmake=make;
+			this.cmodel=model;
+			this.cyear=year;
+		}
+		car.prototype= v_car;
+		var city= new car('Honda','city',2015);
+		var v_truck=new vehicle(4,'diesel',2);
+		function truck(make,model,year)
+		{
+			this.tmake=make;
+			this.tmodel=model;
+			this.tyear=year;
+		}
+		truck.prototype= v_truck;
+		var ace= new truck('TATA','ace',2010);
+		var v_bike=new vehicle(2,'petrol',2);
+		function bike(make,model,year)
+		{
+			this.bmake=make;
+			this.bmodel=model;
+			this.byear=year;
+		}
+		bike.prototype= v_bike;
+		var duke= new bike('KTM','duke',2016);
+		alert("Make: "+city.cmake+"\nModel: "+city.cmodel+"\nYear: "+city.cyear);
+		alert("Make: "+ace.tmake+"\nModel: "+ace.tmodel+"\nYear: "+ace.tyear);
+		alert("Make: "+duke.bmake+"\nModel: "+duke.bmodel+"\nYear: "+duke.byear);
+	</script>
+</head>
+<body>
+</body>
+</html>
